@@ -1,0 +1,810 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.CancelIntent",
+      "samples": [
+        "Cancel"
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent",
+      "samples": [
+        "what can i say",
+        "help",
+        "i need help",
+        "what can i do",
+        "don't know",
+        "i don't know",
+        "i don't know what to do"
+      ]
+    },
+    {
+      "intent": "AMAZON.StopIntent",
+      "samples": [
+        "Stop",
+        "Quit"
+      ]
+    },
+    {
+      "intent": "FlashCardIntent",
+      "samples": [],
+      "slots": [
+        {
+          "name": "Deck",
+          "type": "ASSIGNMENT_DECK_AND_LECTURE_NAMES",
+          "samples": [
+            "The deck name is {Deck}"
+          ]
+        },
+        {
+          "name": "Term",
+          "type": "KEY_TERMS",
+          "samples": [
+            "The term is {Term}"
+          ]
+        },
+        {
+          "name": "Definition",
+          "type": "DEFINITIONS",
+          "samples": [
+            "The definition is {Definition}"
+          ]
+        },
+        {
+          "name": "FlashCardState",
+          "type": "PLANNER_AND_CARD_ACTIONS",
+          "samples": [
+            "{FlashCardState}",
+            "I would like to {FlashCardState}",
+            "{FlashCardState} to my flashcards"
+          ]
+        }
+      ]
+    },
+    {
+      "intent": "LecturesIntent",
+      "samples": [],
+      "slots": [
+        {
+          "name": "CheckPointName",
+          "type": "KEY_TERMS",
+          "samples": [
+            "The checkpoint name is {CheckPointName}"
+          ]
+        },
+        {
+          "name": "Lecture",
+          "type": "ASSIGNMENT_DECK_AND_LECTURE_NAMES",
+          "samples": [
+            "The lecture name is {Lecture}"
+          ]
+        },
+        {
+          "name": "Duration",
+          "type": "AMAZON.DURATION",
+          "samples": [
+            "{Duration}"
+          ]
+        }
+      ]
+    },
+    {
+      "intent": "PlannerIntent",
+      "samples": [
+        "planner",
+        "open my to do list",
+        "go to my to do list",
+        "go to my planner",
+        "open my planner",
+        "open planner"
+      ],
+      "slots": [
+        {
+          "name": "Details",
+          "type": "DETAILS",
+          "samples": [
+            "{Details}",
+            "The details are {Details}"
+          ]
+        },
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE",
+          "samples": [
+            "The date is {Date}",
+            "It is due on {Date}",
+            "{Date}"
+          ]
+        },
+        {
+          "name": "PlannerState",
+          "type": "PLANNER_AND_CARD_ACTIONS",
+          "samples": [
+            "I would like to {PlannerState}",
+            "{PlannerState}"
+          ]
+        },
+        {
+          "name": "AssignmentName",
+          "type": "ASSIGNMENT_DECK_AND_LECTURE_NAMES",
+          "samples": [
+            "{AssignmentName} ",
+            "The name is {AssignmentName}",
+            "It is {AssignmentName}"
+          ]
+        },
+        {
+          "name": "Subject",
+          "type": "SUBJECTS",
+          "samples": [
+            "{Subject}",
+            "The subject is {Subject}",
+            "It is in {Subject}"
+          ]
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "ASSIGNMENT_DECK_AND_LECTURE_NAMES",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "Biology midterm",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Web design project",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Math quiz",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "DEFINITIONS",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "When a stock market projects its value too high",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "The process of cell division that are not gametes",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "A large scale immigration of students",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "DETAILS",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "Due at midnight",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Take test at room one hundred five",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Make several copies for review",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Only paper turn in",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "KEY_TERMS",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "Meiosis",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Opportunity Cost",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Diaspora",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "The reason for the stock market crash",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Bull market",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Three factor authentication",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLANNER_AND_CARD_ACTIONS",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "add",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "modify",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "delete",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "listen",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "SUBJECTS",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "math",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "english",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "linguistics",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "computer science",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "electrical engineering",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "cognitive science",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "biology",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "chemistry",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "physics",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "spanish",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "japanese",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "chinese",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "social welfare",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "history",
+            "synonyms": []
+          }
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-FlashCardIntent.IntentSlot-Deck",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is the deck name?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-FlashCardIntent.IntentSlot-Deck",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Is {Deck} correct?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-FlashCardIntent.IntentSlot-Term",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is your key term?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-FlashCardIntent.IntentSlot-Term",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Is {Term} correct?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-FlashCardIntent.IntentSlot-Definition",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is the definition?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-FlashCardIntent.IntentSlot-Definition",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Is {Definition} correct?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-FlashCardIntent.IntentSlot-FlashCardState",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Would you like to create, modify, remove, or listen to your flashcards?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-LecturesIntent.IntentSlot-CheckPointName",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What would this checkpoint name be?"
+        },
+        {
+          "type": "PlainText",
+          "value": "What is the current term discussed?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-LecturesIntent.IntentSlot-CheckPointName",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Is {CheckPointName} correct?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-LecturesIntent.IntentSlot-Lecture",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is the lecture name?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-LecturesIntent.IntentSlot-Lecture",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Is {Lecture} correct?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-LecturesIntent.IntentSlot-Duration",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How long is the checkpoint?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-PlannerIntent.IntentSlot-Details",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What are the details of this assignment?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-PlannerIntent.IntentSlot-Details",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "You said {Details}, is that correct?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-PlannerIntent.IntentSlot-Date",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is the date it is due?"
+        },
+        {
+          "type": "PlainText",
+          "value": "What is the assignment due date?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-PlannerIntent.IntentSlot-PlannerState",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Do you want to create, modify, remove, or listen to your assignments?"
+        },
+        {
+          "type": "PlainText",
+          "value": "Would you like to make, change, erase, or listen to your assignments?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-PlannerIntent.IntentSlot-AssignmentName",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is the assignment name?"
+        },
+        {
+          "type": "PlainText",
+          "value": "What's your assignment?"
+        },
+        {
+          "type": "PlainText",
+          "value": "What homework do you have?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-PlannerIntent.IntentSlot-AssignmentName",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "The name is {AssignmentName}, correct?"
+        },
+        {
+          "type": "PlainText",
+          "value": "Is the name {AssignmentName} correct?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-PlannerIntent.IntentSlot-Subject",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is the assignment subject?"
+        },
+        {
+          "type": "PlainText",
+          "value": "What is the subject?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-PlannerIntent.IntentSlot-Subject",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Is {Subject} correct?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "FlashCardIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "Deck",
+            "type": "ASSIGNMENT_DECK_AND_LECTURE_NAMES",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-FlashCardIntent.IntentSlot-Deck",
+              "confirm": "Confirm.Intent-FlashCardIntent.IntentSlot-Deck"
+            }
+          },
+          {
+            "name": "Term",
+            "type": "KEY_TERMS",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-FlashCardIntent.IntentSlot-Term",
+              "confirm": "Confirm.Intent-FlashCardIntent.IntentSlot-Term"
+            }
+          },
+          {
+            "name": "Definition",
+            "type": "DEFINITIONS",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-FlashCardIntent.IntentSlot-Definition",
+              "confirm": "Confirm.Intent-FlashCardIntent.IntentSlot-Definition"
+            }
+          },
+          {
+            "name": "FlashCardState",
+            "type": "PLANNER_AND_CARD_ACTIONS",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-FlashCardIntent.IntentSlot-FlashCardState"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LecturesIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "CheckPointName",
+            "type": "KEY_TERMS",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-LecturesIntent.IntentSlot-CheckPointName",
+              "confirm": "Confirm.Intent-LecturesIntent.IntentSlot-CheckPointName"
+            }
+          },
+          {
+            "name": "Lecture",
+            "type": "ASSIGNMENT_DECK_AND_LECTURE_NAMES",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-LecturesIntent.IntentSlot-Lecture",
+              "confirm": "Confirm.Intent-LecturesIntent.IntentSlot-Lecture"
+            }
+          },
+          {
+            "name": "Duration",
+            "type": "AMAZON.DURATION",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-LecturesIntent.IntentSlot-Duration"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PlannerIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "Details",
+            "type": "DETAILS",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-PlannerIntent.IntentSlot-Details",
+              "confirm": "Confirm.Intent-PlannerIntent.IntentSlot-Details"
+            }
+          },
+          {
+            "name": "Date",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-PlannerIntent.IntentSlot-Date"
+            }
+          },
+          {
+            "name": "PlannerState",
+            "type": "PLANNER_AND_CARD_ACTIONS",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-PlannerIntent.IntentSlot-PlannerState"
+            }
+          },
+          {
+            "name": "AssignmentName",
+            "type": "ASSIGNMENT_DECK_AND_LECTURE_NAMES",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-PlannerIntent.IntentSlot-AssignmentName",
+              "confirm": "Confirm.Intent-PlannerIntent.IntentSlot-AssignmentName"
+            }
+          },
+          {
+            "name": "Subject",
+            "type": "SUBJECTS",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicit": "Elicit.Intent-PlannerIntent.IntentSlot-Subject",
+              "confirm": "Confirm.Intent-PlannerIntent.IntentSlot-Subject"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

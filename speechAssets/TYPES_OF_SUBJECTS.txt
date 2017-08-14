@@ -1,0 +1,18 @@
+TYPES_OF_SUBJECTS
+math
+english
+linguistics
+computer science
+electrical engineering
+cognitive science
+biology
+chemistry
+physics
+spanish
+japanese
+chinese
+social welfare
+history
+history of art
+rapid prototyping and testing
+cloud architecture in web applications
